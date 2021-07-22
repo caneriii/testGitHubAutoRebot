@@ -42,8 +42,10 @@ jobs:
       - name: Run a multi-line2
         run: echo $RUNNER_WORKSPACE 
       - name: Run a multi-line3
-        run: echo $GITHUB_WORKSPACE 
+        run: echo $GITHUB_WORKSPACE
       - name: Run a multi-line4
+        run: cd testGitHubAutoRebot/
+      - name: Run a multi-line5
         run: git status 
         
           
