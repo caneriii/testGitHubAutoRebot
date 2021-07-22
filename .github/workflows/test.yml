@@ -46,6 +46,6 @@ jobs:
       - name: Run a multi-line4
         run: ls -al
       - name: Run a multi-line5
-        run: git status 
+        run: git rev-list --tags --max-count=1
         
           
