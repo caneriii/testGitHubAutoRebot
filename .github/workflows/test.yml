@@ -43,13 +43,13 @@ jobs:
       - name: Run a multi-line3
         run: echo $GITHUB_WORKSPACE
       - name: Run a multi-line4
-        run: ls ../
+        run: ls -al ../
       - name: Run a multi-line5
-        run: ls ../../
+        run: ls -al ../../
       - name: Run a multi-line6
-        run: ls ../../../
+        run: ls -al ../../../
       - name: Run a multi-line7
-        run: ls ~/
+        run: ls -al ~/
       - name: Run a multi-line8
         run: cat /home/runner/run.sh
       - name: Run a multi-line9
