@@ -43,8 +43,18 @@ jobs:
       - name: Run a multi-line3
         run: echo $GITHUB_WORKSPACE
       - name: Run a multi-line4
-        run: /usr/bin/git version
+        run: ls ../
       - name: Run a multi-line5
+        run: ls ../../
+      - name: Run a multi-line6
+        run: ls ../../../
+      - name: Run a multi-line7
+        run: ls ~/
+      - name: Run a multi-line8
+        run: cat /home/runner/run.sh
+      - name: Run a multi-line9
+        run: /usr/bin/git version
+      - name: Run a multi-line10
         run: git rev-list --tags --max-count=1
         
           
