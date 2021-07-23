@@ -14,7 +14,7 @@ jobs:
   # This workflow contains a single job called "build"
   report:
     # The type of runner that the job will run on
-    runs-on: [self-hosted, Linux, X64, dev]
+    runs-on: dev
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -44,7 +44,7 @@ jobs:
       - name: Run a multi-line3
         run: echo $GITHUB_WORKSPACE
       - name: Run a multi-line4
-        run: ls -al
+        run: /usr/bin/git version
       - name: Run a multi-line5
         run: git rev-list --tags --max-count=1
         
