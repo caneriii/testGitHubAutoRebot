@@ -2,7 +2,7 @@ name: Dev
 on: [workflow_dispatch]
 jobs: 
   dev-job:
-    name: Build ESM
+    name: Build Test
     runs-on: ubuntu-latest
     steps:
     - name: Clean All
