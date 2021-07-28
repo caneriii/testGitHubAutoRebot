@@ -26,7 +26,7 @@ jobs:
           
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo ${{ secrets.AAAAAAA }}
+        run: echo ${{ secrets.aaawqc }}
         
       - name: Invoke workflow without inputs
         uses: benc-uk/workflow-dispatch@v1
