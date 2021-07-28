@@ -32,4 +32,4 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: Dev
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
