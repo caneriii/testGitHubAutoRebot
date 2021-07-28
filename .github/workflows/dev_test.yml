@@ -1,0 +1,12 @@
+name: Dev
+on: [workflow_dispatch]
+jobs: 
+  dev-job:
+    name: Build ESM
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clean All
+      uses: AutoModality/action-clean@v1
+      
+    - name: Run a one-line script
+      run: echo Hello, DEV!
