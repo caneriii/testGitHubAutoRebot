@@ -14,8 +14,8 @@ jobs:
   # This workflow contains a single job called "build"
   report:
     # The type of runner that the job will run on
-    #runs-on: ubuntu-latest
-    runs-on: dev
+    runs-on: ubuntu-latest
+    #runs-on: dev
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: AutoModality/action-clean@v1
@@ -27,37 +27,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        id: tag_version
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-          ls -al
-      - name: Run a ps aux
-        run: ps aux 
-          
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line1
-        run: pwd 
-      - name: Run a multi-line2
-        run: echo $RUNNER_WORKSPACE 
-      - name: Run a multi-line3
-        run: echo $GITHUB_WORKSPACE
-      - name: Run a multi-line4
-        run: ls -al ../
-      - name: Run a multi-line5
-        run: ls -al ../../
-      - name: Run a multi-line6
-        run: ls -al ../../../
-      - name: Run a multi-line7
-        run: ls -al ~/
-      - name: Run a multi-line8
-        run: ls -al /
-      - name: Run a multi-line9
-        run: /usr/bin/git version
-      - name: Run a multi-line10
-        run: git rev-list --tags --max-count=1
         
-          
+      - name: Invoke workflow without inputs
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: Dev
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
