@@ -28,8 +28,10 @@ jobs:
       run: |
         echo ${{ steps.runEnv.outputs.TEST_CHECK }}
     - name: T3
+      run: |
         echo ${{ steps.runEnv.outputs.TEST_CHECK }}
     - name: T4
+      run: |
         echo ${{ steps.runEnv.outputs.TEST_CHECK }}
     
       
