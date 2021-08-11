@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       release_enable:
-        default:  
+        default: 'false'
 
 #on: push
 env:
@@ -35,7 +35,7 @@ jobs:
         ls -al
         echo "$testV"
     - name: test if 
-      if: ${{ github.event.inputs.release_enable }}
+      if: ${{ github.event.inputs.release_enable == 'true' && github.ref == 'refs/heads/master' }}
       run: |
         echo "test if v"
     
