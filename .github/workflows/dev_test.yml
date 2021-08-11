@@ -17,6 +17,21 @@ jobs:
     #- name: Clean All
     #  uses: AutoModality/action-clean@v1
     - uses: actions/checkout@v2
+
+    - name: T1
+      run: |
+        echo "hi"
+        echo "::set-output name=TEST_CHECK::true"
+        echo "end"
+      id: runEnv
+    - name: T2
+      run: |
+        echo ${{ steps.runEnv.outputs.TEST_CHECK }}
+    - name: T3
+        echo ${{ steps.runEnv.outputs.TEST_CHECK }}
+    - name: T4
+        echo ${{ steps.runEnv.outputs.TEST_CHECK }}
+    
       
     - name: s2
       run: |
