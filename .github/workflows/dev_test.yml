@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       release_enable:
-        default: 'false'
+        default: false
 
 #on: push
 env:
@@ -35,7 +35,7 @@ jobs:
         ls -al
         echo "$testV"
     - name: test if 
-      if: ${{ env.workflow_release }}
+      if: ${{ github.event.inputs.release_enable }}
       run: |
         echo "test if v"
     
