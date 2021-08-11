@@ -12,5 +12,6 @@ jobs:
     - name: Run a one-line script
       run: |
         echo Hello, DEV!
+        echo $GITHUB_REF
         git branch -a
         ls -al
