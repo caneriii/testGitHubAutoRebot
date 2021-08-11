@@ -10,9 +10,18 @@ jobs:
     #  uses: AutoModality/action-clean@v1
     - uses: actions/checkout@v2
       
-    - name: Run a one-line script
+    - name: s2
       run: |
         echo Hello, DEV!
         echo $GITHUB_REF
         git branch -a
         ls -al
+        testV="aaaa"
+      
+    - name: s1
+      run: |
+        echo Hello, DEV!
+        echo $GITHUB_REF
+        git branch -a
+        ls -al
+        echo "$testV"
