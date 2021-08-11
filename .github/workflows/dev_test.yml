@@ -30,7 +30,7 @@ jobs:
         ls -al
         echo "$testV"
     - name: test if 
+      if: ${{ core.getInput("workflow_release") }}
       run: |
         echo "test if v"
-        echo core.getInput("workflow_release")
     
