@@ -32,4 +32,5 @@ jobs:
     - name: test if 
       run: |
         echo "test if v"
+        echo core.getInput("workflow_release")
     
