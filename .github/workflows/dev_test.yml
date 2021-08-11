@@ -1,5 +1,8 @@
 name: Dev
-on: [workflow_dispatch]
+#on: [workflow_dispatch]
+on: push
+env:
+  testV: "aaaa"
 jobs: 
   dev-job:
     name: Build Test
@@ -16,7 +19,8 @@ jobs:
         echo $GITHUB_REF
         git branch -a
         ls -al
-        testV="aaaa"
+        echo $testV
+        testV="bbbb"
       
     - name: s1
       run: |
