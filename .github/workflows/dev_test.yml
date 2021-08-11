@@ -8,6 +8,7 @@ jobs:
     steps:
     #- name: Clean All
     #  uses: AutoModality/action-clean@v1
+    - uses: actions/checkout@v2
       
     - name: Run a one-line script
       run: |
