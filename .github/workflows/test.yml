@@ -26,7 +26,11 @@ jobs:
           
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo aaaaaa
+        run: |
+          echo aaaaaa
+          pwd
+          ls -al
+          ls -al ../
         
       - name: Invoke workflow without inputs
         uses: benc-uk/workflow-dispatch@v1
