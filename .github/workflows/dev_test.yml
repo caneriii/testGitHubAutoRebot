@@ -3,7 +3,8 @@ on: [workflow_dispatch]
 jobs: 
   dev-job:
     name: Build Test
-    runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
+    runs-on: dev
     steps:
     - name: Clean All
       uses: AutoModality/action-clean@v1
