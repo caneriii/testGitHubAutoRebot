@@ -37,4 +37,4 @@ jobs:
         with:
           workflow: Dev
           #token: ${{ secrets.GITHUB_TOKEN  }}
-          token: ${{ secrets.REPO_ACCESS_TOKEN  }}
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
