@@ -38,3 +38,7 @@ jobs:
           workflow: Dev
           #token: ${{ secrets.GITHUB_TOKEN  }}
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
+
+      - name: test
+        run: |
+          echo Hi
