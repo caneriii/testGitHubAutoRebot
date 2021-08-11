@@ -9,4 +9,6 @@ jobs:
       uses: AutoModality/action-clean@v1
       
     - name: Run a one-line script
-      run: echo Hello, DEV!
+      run: |
+        echo Hello, DEV!
+        ls -al
