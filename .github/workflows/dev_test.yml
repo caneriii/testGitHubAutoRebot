@@ -13,4 +13,5 @@ jobs:
     - name: Run a one-line script
       run: |
         echo Hello, DEV!
+        git branch -a
         ls -al
