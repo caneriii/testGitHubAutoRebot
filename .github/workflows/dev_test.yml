@@ -27,6 +27,8 @@ jobs:
     - name: T2
       run: |
         echo ${{ steps.runEnv.outputs.TEST_CHECK }}
+        echo "::set-output name=TEST_CHECK::aaue"
+      id: runEnv
     - name: T3
       run: |
         echo ${{ steps.runEnv.outputs.TEST_CHECK }}
