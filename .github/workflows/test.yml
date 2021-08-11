@@ -38,7 +38,7 @@ jobs:
           workflow: Dev
           #token: ${{ secrets.GITHUB_TOKEN  }}
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          inputs: '{ "message": "blah blah", "debug": true }'
+          inputs: '{ "release_enable": "ture" }'
 
       - name: test
         run: |
