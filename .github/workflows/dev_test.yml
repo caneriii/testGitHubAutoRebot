@@ -3,12 +3,16 @@ on: [workflow_dispatch]
 jobs: 
   dev-job:
     name: Build Test
-    runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
+    runs-on: dev
     steps:
-    - name: Clean All
-      uses: AutoModality/action-clean@v1
+    #- name: Clean All
+    #  uses: AutoModality/action-clean@v1
+    - uses: actions/checkout@v2
       
     - name: Run a one-line script
       run: |
         echo Hello, DEV!
+        echo $GITHUB_REF
+        git branch -a
         ls -al
