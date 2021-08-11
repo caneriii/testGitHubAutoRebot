@@ -32,12 +32,13 @@ jobs:
           ls -al
           ls -al ../
         
-      - name: Invoke workflow without inputs
+      - name: Invoke workflow
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: Dev
           #token: ${{ secrets.GITHUB_TOKEN  }}
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          inputs: '{ "workflow_release": true }'
 
       - name: test
         run: |
@@ -45,5 +46,5 @@ jobs:
 
 
       - name: if
-        if: ${{ github.ref == 'refs/heads/master' }}
-        run: echo if
+        if: ${{ core.getInput("workflow_release") }}
+        run: echo hi
