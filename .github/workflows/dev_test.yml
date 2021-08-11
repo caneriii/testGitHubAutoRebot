@@ -30,11 +30,3 @@ jobs:
         ls -al
         echo "$testV"
     
-jobs:
-  test-job:
-    if: ${{ github.ref == 'refs/heads/master' }}
-    name: dev dep
-    runs-on: dev
-    steps:
-    - name: HI
-      run: echo gogogo
