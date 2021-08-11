@@ -6,8 +6,8 @@ jobs:
     #runs-on: ubuntu-latest
     runs-on: dev
     steps:
-    - name: Clean All
-      uses: AutoModality/action-clean@v1
+    #- name: Clean All
+    #  uses: AutoModality/action-clean@v1
       
     - name: Run a one-line script
       run: |
